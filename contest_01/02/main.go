@@ -1,30 +1,16 @@
-#include <iostream>
-#include <set>
-#include <vector>
-#include <unordered_map>
+package main
 
-int main() {
-    std::set<std::string> resSet;
-    std::vector<std::string> startVector;
-    std::unordered_map<std::string, int> wordCount;
-    std::string word;
+import (
+  "fmt"
+  "math"
+)
 
-    while (word != "end") {
-        std::cin >> word;
-        startVector.push_back(word);
-    }
-
-    for (const std::string& words : startVector) {
-        wordCount[words]++;
-    }
-
-    for (const auto& pair : wordCount) {
-        if (pair.second > 1) {
-            resSet.insert(pair.first);
-        }
-    }
-
-    for (auto i : resSet) {
-        std::cout << i << " ";
-    }
+func main() {
+  var chelovek float64 = 0.5
+  chelovek = 365 * chelovek
+  var dub float64 = 20
+  var topol float64 = 32
+  dub1 := math.Ceil(chelovek / dub)
+  topol1 := math.Ceil(chelovek / topol)
+  fmt.Println(chelovek, topol1, dub1)
 }
